@@ -1,0 +1,55 @@
+# change window focus within space
+# shift + alt - j : sh ~/.config/skhd/focus_clockwise.sh
+shift + alt - j : yabai -m window --focus west
+shift + alt - k : yabai -m window --focus east
+
+# swap windows
+shift + lctrl + alt - k : sh ~/.config/skhd/cycle_clockwise.sh
+shift + lctrl + alt - j : sh ~/.config/skhd/cycle_counterclockwise.sh
+
+# fullscreen
+shift + alt - d : yabai -m window --toggle zoom-fullscreen
+
+# rotate
+shift + lctrl + alt - r : yabai -m space --rotate 270
+
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+# fllip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+# toggle window float
+shift + alt - t : yabai -m window --togle float --grid 4:4:1:1:2:2
+
+# balance out tree of windows
+shift + alt - e : yabai -m space --balance
+
+# move window to space
+shift + alt - 1 : yabai -m window --space 1;
+shift + alt - 2 : yabai -m window --space 2;
+shift + alt - 3 : yabai -m window --space 3;
+shift + alt - 4 : yabai -m window --space 4;
+shift + alt - 5 : yabai -m window --space 5;
+shift + alt - q : yabai -m window --space 6;
+shift + alt - w : yabai -m window --space 7;
+shift + alt - e : yabai -m window --space 8;
+shift + alt - r : yabai -m window --space 9;
+shift + alt - t : yabai -m window --space 10;
+
+# start/stop yabai
+ctrl + alt - s : brew services start yabai
+ctrl + alt - q : brew services stop yabai
+
+# no gaps
+shift + alt - g : yabai -m space --toggle padding
+
+# Resize
+lctrl + shift + alt - h : yabai -m window --resize left:-50:0; \
+                  yabai -m window --resize right:-50:0
+lctrl + shift + alt - j : yabai -m window --resize bottom:0:50; \
+                  yabai -m window --resize top:0:50
+lctrl + shift + alt - k : yabai -m window --resize top:0:-50; \
+                  yabai -m window --resize bottom:0:-50
+lctrl + shift + alt - l : yabai -m window --resize right:50:0; \
+                  yabai -m window --resize left:50:0
